@@ -3,17 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 
 </head>
 <body>
-<h2>Login</h2>
+<h2>Register</h2>
 
 
-<form action="../login" method="POST">
+<form action="../register" method="POST">
     <div class="form-group">
         <label>Login</label>
         <input type="text" class="form-control" name="login">
@@ -22,7 +22,11 @@
         <label>Password</label>
         <input type="password" class="form-control" name="password">
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign up</button>
 </form>
 
 

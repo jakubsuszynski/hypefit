@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jsuszynski</groupId>
     <artifactId>hypefit</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>hypefit</name>
     <url>http://maven.apache.org</url>
@@ -17,12 +17,8 @@
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <build>
-        <finalName>hypefit</finalName>
-    </build>
-    <dependencies>
-
-    </dependencies>
 </project>

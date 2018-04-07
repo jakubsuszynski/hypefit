@@ -1,6 +1,5 @@
 package com.jsuszynski.hypefit.login.servlets;
 
-import com.jsuszynski.hypefit.login.domain.Credentials;
 import com.jsuszynski.hypefit.login.domain.User;
 import com.jsuszynski.hypefit.login.tools.PasswordHash;
 
@@ -16,29 +15,28 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
-    private static final String ADDRESS = "localhost:8080/hypefitapi/authenticate";
+@WebServlet("/register")
+public class RegisterServlet extends HttpServlet {
+    private static final String ADDRESS = "localhost:8080/hypefitapi/register";
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Credentials credentials = new Credentials(req.getParameter("login"), PasswordHash.hashPassword(req));
-
+        User user = new User(PasswordHash.hashPassword(req), req.getParameter("login"), req.getParameter("email"), "user");
         Client client = ClientBuilder.newClient();
         WebTarget webTarget = client.target(ADDRESS);
 
-        Response response = webTarget.request().post(Entity.json(credentials));
+        Response response = webTarget.request().post(Entity.json(user));
 
         if (response.getStatus() == 200) {
-            User user = response.readEntity(User.class);
-            req.getSession().setAttribute("user", user);
+            req.setAttribute("registerMessage", true);
             resp.sendRedirect("index.jsp");
         } else {
-            req.setAttribute("loginMessage", false);
-            resp.sendRedirect("users/login.jsp");
+            req.setAttribute("registerMessage", false);
+            resp.sendRedirect("users/register.jsp");
         }
         return;
-    }
 
+
+    }
 }

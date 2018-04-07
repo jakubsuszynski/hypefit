@@ -5,18 +5,18 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-    <!--<persistence-unit name="hypefit-auth">-->
-        <!--<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
-        <!--<jta-data-source>java:/hypefit-auth</jta-data-source>-->
-        <!--<properties>-->
-            <!--<property name="hibernate.archive.autodetection" value="class"/>-->
-            <!--<property name="hibernate.show_sql" value="true"/>-->
-            <!--<property name="hibernate.format_sql" value="true"/>-->
-            <!--<property name="hibernate.hbm2ddl.auto" value="update"/>-->
-            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>-->
-            <!--<property name="hibernate.connection.CharSet" value="utf8" />-->
-            <!--<property name="hibernate.connection.characterEncoding" value="utf8" />-->
-            <!--<property name="hibernate.connection.useUnicode" value="true" />-->
-        <!--</properties>-->
-    <!--</persistence-unit>-->
+    <persistence-unit name="hypefit-auth">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/hypefit-auth</jta-data-source>
+        <properties>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.connection.CharSet" value="utf8" />
+            <property name="hibernate.connection.characterEncoding" value="utf8" />
+            <property name="hibernate.connection.useUnicode" value="true" />
+        </properties>
+    </persistence-unit>
 </persistence>

@@ -1,8 +1,5 @@
-package main.java.com.jsuszynski.hypefit.login.domain;
+package com.jsuszynski.hypefit.login.domain;
 
-import javax.persistence.Entity;
-
-@Entity
 public class User {
 
     private Long id;
@@ -11,8 +8,8 @@ public class User {
     private String email;
     private String role;
 
-    public User(Long id, String password, String login, String email, String role) {
-        this.id = id;
+
+    public User(String password, String login, String email, String role) {
         this.password = password;
         this.login = login;
         this.email = email;

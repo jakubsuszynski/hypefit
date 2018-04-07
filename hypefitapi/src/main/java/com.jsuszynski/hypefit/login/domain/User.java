@@ -1,6 +1,5 @@
-package com.jsuszynski.domain;
+package com.jsuszynski.hypefit.login.domain;
 
-import javax.ejb.TransactionAttribute;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
