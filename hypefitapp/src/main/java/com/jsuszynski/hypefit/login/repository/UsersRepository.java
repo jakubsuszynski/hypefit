@@ -1,4 +1,4 @@
-package com.jsuszynski.hypefit.login.repository;
+package main.java.com.jsuszynski.hypefit.login.repository;
 
 import com.jsuszynski.hypefit.login.domain.User;
 

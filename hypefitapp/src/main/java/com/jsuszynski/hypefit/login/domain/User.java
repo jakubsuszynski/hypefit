@@ -1,11 +1,17 @@
-package com.jsuszynski.hypefit.login.domain;
+package main.java.com.jsuszynski.hypefit.login.domain;
 
 import javax.persistence.Entity;
 
 @Entity
 public class User {
 
-    public User(long id, String password, String login, String email, String role) {
+    private Long id;
+    private String password;
+    private String login;
+    private String email;
+    private String role;
+
+    public User(Long id, String password, String login, String email, String role) {
         this.id = id;
         this.password = password;
         this.login = login;
@@ -13,12 +19,12 @@ public class User {
         this.role = role;
     }
 
-    public long getId() {
+    public Long getId() {
 
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,12 +51,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    private long id;
-    private String password;
-    private String login;
-    private String email;
-    private String role;
 
     public String getRole() {
         return role;
